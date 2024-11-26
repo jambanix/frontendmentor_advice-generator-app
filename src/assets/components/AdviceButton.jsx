@@ -4,7 +4,7 @@ export const AdviceButton = ({onClick}) => {
 
   const [isDisabled, setIsDisabled] = useState(true);
 
-  const colorClass = isDisabled ? "bg-grayish-blue" : "bg-neon-green"
+  const colorClass = isDisabled ? "bg-grayish-blue" : "bg-neon-green hover:shadow-3xl"
   const loadBarClass = isDisabled ? "animate-loadIn visible" : "hidden"
 
   // disables button for 3s after being clicked. button disabled for 3 sec on initial render

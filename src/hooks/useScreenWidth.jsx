@@ -13,6 +13,5 @@ export const useScreenWidth = () => {
     return () => window.removeEventListener("resize", handleWidthChange);
   }, []);
 
-  console.log(width);
   return width < 768 ? "mobile" : "desktop";
 }

@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-      transitionDuration: {
-        "3000": "3000ms"
+      boxShadow: {
+        "3xl": "0px 0px 32px 3px rgba(82, 255, 168, 0.5);"
       },
       keyframes: {
         loadIn: {
