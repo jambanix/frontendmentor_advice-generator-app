@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        "3000": "3000ms"
+      },
+      keyframes: {
+        loadIn: {
+          from: {bottom: "-96px"},
+          to: {bottom: "-32px"}
+        },
+      },
+      animation: {
+        loadIn: "loadIn 3s linear"
+      }
+    },
     colors: {
       "dark-blue": "#202733",
       "dark-grayish-blue": "#313A48",
