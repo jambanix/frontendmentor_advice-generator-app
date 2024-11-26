@@ -1,18 +1,19 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState} from "react"
 
 export const AdviceButton = ({onClick}) => {
 
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const colorClass = isDisabled ? "bg-grayish-blue" : "bg-neon-green"
-  const loadBarClass = isDisabled ? "animate-loadIn" : ""
+  const loadBarClass = isDisabled ? "animate-loadIn visible" : "hidden"
 
+  // disables button for 3s after being clicked. button disabled for 3 sec on initial render
   useEffect(() => {
     let timer;
     if (isDisabled) {
       timer = setTimeout(() => {
-        setIsDisabled(false);
-      }, 3000);
+      setIsDisabled(!isDisabled);
+    }, 3000);
     }
     return () => clearTimeout(timer);
   }, [isDisabled])
