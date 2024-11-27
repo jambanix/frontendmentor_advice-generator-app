@@ -19,6 +19,7 @@ export const AdviceBox = () => {
       console.log(error)
     }
   }
+  
 
   // grab new advice on load
   useEffect(() => {
