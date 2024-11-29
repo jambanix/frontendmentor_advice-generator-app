@@ -20,6 +20,10 @@ export const AdviceBox = () => {
     }
   }
 
+  useEffect(() => {
+    newAdvice();
+  }, []);
+
   return (
     <section className="rounded-xl bg-dark-grayish-blue relative flex flex-col p-10 items-center gap-6 lg:gap-10 h-fit text-center max-w-[540px] w-full shadow-2xl">
       <AdviceNumber key={advice.id || 0}{...advice} />
