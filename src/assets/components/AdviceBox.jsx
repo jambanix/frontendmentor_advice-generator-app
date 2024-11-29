@@ -19,17 +19,11 @@ export const AdviceBox = () => {
       console.log(error)
     }
   }
-  
-
-  // grab new advice on load
-  useEffect(() => {
-    newAdvice();
-  }, []);
 
   return (
     <section className="rounded-xl bg-dark-grayish-blue relative flex flex-col p-10 items-center gap-6 lg:gap-10 h-fit text-center max-w-[540px] w-full shadow-2xl">
-      <AdviceNumber {...advice} />
-      <AdviceQuote {...advice} />
+      <AdviceNumber key={advice.id || 0}{...advice} />
+      <AdviceQuote key={advice.advice || ""} {...advice}/>
       <img src={`images/pattern-divider-${width}.svg`} alt="dice icon" className="mb-8"/>
       <AdviceButton onClick={newAdvice}/>
     </section>
