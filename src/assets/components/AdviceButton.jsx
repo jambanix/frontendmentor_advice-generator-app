@@ -25,7 +25,7 @@ export const AdviceButton = ({onClick}) => {
 
   return (
     <button disabled={isDisabled} className={`flex items-center justify-center rounded-full w-16 h-16 absolute left-1/2 -bottom-8 -translate-x-1/2 ${colorClass} overflow-hidden`} onClick={handleClick}>
-      <img className="z-20" src="images/icon-dice.svg"></img>
+      <img className="z-20" src="images/icon-dice.svg" alt="dice icon"></img>
       <div className={`h-24 w-24 absolute bg-neon-green ${loadBarClass}`}></div>
     </button>
   )
